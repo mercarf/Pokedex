@@ -2,19 +2,37 @@ import React, { useState } from 'react';
 import '../stylsheets/App.css';
 import pokemonsFromApi from '../data/pokemon.json';
 import PokeList from './PokeList';
+import Header from './Header';
+import Hero from './Hero';
 
-function App() {
+const App = () => {
   const [pokemons, setPokemon] = useState(pokemonsFromApi);
+
+  const [filterText, setFilterText] = useState('');
+
+  const changeFilterText = (text) => {
+    setFilterText(text);
+  };
+
+  const filteredPokemon = pokemons
+    .filter((pokemon) => {
+      return pokemon.deleted === false;
+    })
+    .filter((pokemon) => {
+      return pokemon.subject.includes(filterText);
+    });
+
+  console.log('Renderizando...');
+
   return (
     <div className='App'>
-      <h1>Pokédex</h1>
-      <p>
-        Bienvenido a nuestra pokédex, aquí podrás encontrar todos los pokemon
-        que necesites, sus tipos y evoluciones.
-      </p>
+      <Header />
+      <Hero changeFilterText={changeFilterText} />
+      <h2>Filtrando por: "{filterText}"</h2>
+
       <PokeList pokemons={pokemons} />
     </div>
   );
-}
+};
 
 export default App;
