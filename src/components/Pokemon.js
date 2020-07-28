@@ -7,7 +7,7 @@ const Pokemon = (props) => {
   return (
     <div className='card__description'>
       <img className='card__img' src={props.url} alt='imagen' />
-      <h2 className='card__title '>{props.name}</h2>
+      <h2 className='card__name '>{props.name}</h2>
       <h4>Evolución de:</h4>
       <p className='card__evolution'>
         {props.evolution === null ? 'No ha evolucionado' : props.evolution}

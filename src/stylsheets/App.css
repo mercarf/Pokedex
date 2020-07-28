@@ -6,6 +6,7 @@
 
 .App {
   text-align: center;
+  background-color: lightcoral;
 }
 
 .cards {
@@ -14,8 +15,16 @@
   justify-content: center;
   flex-wrap: wrap;
   align-items: flex-start;
-  /* border: 1px solid lightcoral;
+}
+
+.card {
+  background-color: lightgoldenrodyellow;
+  border: 1px solid darkred;
   border-radius: 5px;
-  width: 300px;
-  min-height: 250px; */
+  width: 200px;
+  min-height: 250px;
+  margin: 10px;
+}
+.card:hover {
+  background-color: lightsalmon;
 }
