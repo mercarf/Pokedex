@@ -60,3 +60,27 @@
   border-top: 1px solid darkred;
   border-radius: 5px;
 }
+
+.poison {
+  background-color: rgb(221, 118, 221);
+}
+
+.grass {
+  background-color: rgb(130, 233, 130);
+}
+
+.fire {
+  background-color: rgb(255, 132, 132);
+}
+
+.water {
+  background-color: rgb(112, 229, 250);
+}
+
+.flying {
+  background-color: rgb(189, 185, 185);
+}
+
+.bug {
+  background-color: rgb(243, 217, 98);
+}

@@ -3,7 +3,7 @@ import React from 'react';
 const Pokemon = (props) => {
   const typesLi = props.types.map((type, index) => {
     return (
-      <li key={index} className='card__types__list'>
+      <li key={index} className={`${type} card__types__list`}>
         {type.toUpperCase()}
       </li>
     );
