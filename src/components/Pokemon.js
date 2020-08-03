@@ -9,7 +9,7 @@ const Pokemon = (props) => {
     );
   });
   return (
-    <div className='card__description'>
+    <>
       <img className='card__img' src={props.url} alt='imagen' />
       <h2 className='card__name '>{props.name}</h2>
       <div className='card__evolution'>
@@ -23,7 +23,7 @@ const Pokemon = (props) => {
         <h4>De tipo:</h4>
         <div className='card__types__box'>{typesLi}</div>
       </ul>
-    </div>
+    </>
   );
 };
 

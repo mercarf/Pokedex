@@ -1,10 +1,15 @@
 import React from 'react';
 import Pokemon from './Pokemon';
 
+function addFav(props) {
+  const handleFavClick = (ev) => {
+    props.changeFav(ev.currentTarget.id);
+  };
+
 const PokeList = (props) => {
   const pokemons = props.pokemons.map((pokemon) => {
     return (
-      <li className='card ' key={pokemon.id}>
+      <li className='card' key={pokemon.id} onClick={handleFavClick}>
         <Pokemon
           name={pokemon.name}
           types={pokemon.types}
@@ -16,4 +21,5 @@ const PokeList = (props) => {
   });
   return <ul className='cards'>{pokemons}</ul>;
 };
+
 export default PokeList;
