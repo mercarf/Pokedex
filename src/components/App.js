@@ -5,6 +5,14 @@ import PokeList from './PokeList';
 
 function App() {
   const [pokemons, setPokemon] = useState(pokemonsFromApi);
+
+  //Funcion que viene de lifting
+  const changeFav = (clickedId) => {
+    console.log('Target:', clickedId);
+    // actualizar estado activeFav con target
+    // añadir clase especial al colapsble que esté en activeCollapsible
+  };
+
   return (
     <div className='App'>
       <h1>Pokédex</h1>
@@ -12,7 +20,7 @@ function App() {
         Bienvenido a nuestra pokédex, aquí podrás encontrar todos los pokemon
         que necesites, sus tipos y evoluciones.
       </p>
-      <PokeList pokemons={pokemons} />
+      <PokeList pokemons={pokemons} changeFav={changeFav} />
     </div>
   );
 }
